@@ -1,0 +1,23 @@
+Reminders / Problems
+
+- CONTRIBUTING.md: Under "Changing the code base", link to the numpy docstrings is broken, should be https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
+
+- _validate_input_para(self, para, column_names): the column_names argument is unused.  Caller expects somethign different in lines 560 and 572.
+
+- _separate_exclude_cases: might not work as expected. Using standard exclude_prefix and the text "Asia without China", it leaves whitespace, i.e. "Asia "
+
+- _get_input_format_from_name: Uses exceptions instead of normal conditionals. Fails when given an arbitrary object, e.g. a list.
+
+
+Questions
+
+- Floats instead of integers in col dtypes
+
+- Why is there no pyproject.toml?  https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+- Why does Zanzibar have an entry when it's part of Tanzania?
+
+
+Diff
+
+- Have installed black-jupyter
